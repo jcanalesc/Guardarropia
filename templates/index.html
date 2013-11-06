@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap-theme.min.css" />
+	<script type="text/javascript" src="/static/jquery.js"></script>
+	<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/guardarropia.js"></script>
+	<style type="text/css">
+	body
+	{
+		padding-top: 50px;
+        background: url(/static/fondo.jpg);
+	}
+	.table * tr *
+    {
+        text-align: center;
+    }
+    .container
+    {
+        max-width: 1366px;
+    }
+    .blue
+    {
+        background: skyblue;
+    }
+    .templateitem, .tableitem, .templateempty
+    {
+        display: none;
+    }
+    textarea.fixedtext
+    {
+        width: 100%;   
+    }
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Guardarropía</a>
+        </div>
+        <div class="pull-right">
+        	<img src="/static/logo.jpg" height="50">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    Ingrese código:
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="iCodigo">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="iCodigoBtn"><i class="glyphicon glyphicon-tags"></i></button>
+                      </span>
+                    </div>
+                </div>
+                <div class="well">
+                    asdasd
+                </div>
+            </div>
+            <div class="col-md-9" id="iTabla">
+                <div class="templateitem">
+                    <div class="well tableitem" data-codigo="%codigo%">
+                        <button class="close">&times;</button>
+                        <p>Código: %codigo%</p>
+                        <table class="table table-condensed table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Percha</th>
+                                    <th>Control</th>
+                                </tr>
+                            </thead>
+                            <tbody class="itemlist" data-codigo="%codigo%">
+                            </tbody>
+                        </table>
+                        <button class="btn bAgregar">agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
