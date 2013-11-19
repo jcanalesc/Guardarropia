@@ -12,6 +12,10 @@
 		padding-top: 50px;
         background: url(/static/fondo.jpg);
 	}
+    button.close
+    {
+        font-size: 48px;
+    }
 	.table * tr *
     {
         text-align: center;
@@ -32,6 +36,25 @@
     {
         width: 100%;   
     }
+    td.percha
+    {
+        font-size: 28px;
+        font-weight: bolder;
+    }
+    #flashmsgs
+    {
+        text-align: center;
+        display: none;
+    }
+    span.toggleable
+    {
+        display: block;
+        cursor: pointer;
+    }
+    div.eqh > div
+    {
+        height: 115px;
+    }
 	</style>
 </head>
 <body>
@@ -47,24 +70,29 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">&nbsp;</div>
+            <div class="col-sm-12">
+                &nbsp;
+            </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-sm-12">
+                <div class="alert alert-info" id="flashmsgs">test</div>
+            </div>
+        </div>
+        <div class="row eqh">
+            <div class="col-sm-6">
                 <div class="well">
-                    Ingrese código:
-                    <div class="input-group">
-                      <input type="text" class="form-control" id="iCodigo">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="iCodigoBtn"><i class="glyphicon glyphicon-tags"></i></button>
-                      </span>
-                    </div>
-                </div>
-                <div class="well">
-                    asdasd
+                    Total de prendas en guardarropía: <span id="sTotal">0</span>
                 </div>
             </div>
-            <div class="col-md-9" id="iTabla">
+            <div class="col-sm-6">
+                <div class="well">
+                    <button class="btn btn-danger btn-lg btn-block" id="bVaciar">Vaciar guardarropía</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="iTabla">
                 <div class="templateitem">
                     <div class="well tableitem" data-codigo="%codigo%">
                         <button class="close">&times;</button>
